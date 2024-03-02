@@ -3,7 +3,7 @@ const mySQLQuery = require("../mysql/connection.js");
 const getResults = async (req, res) => {
   console.log("GET RESULTS");
   try {
-    const results = await mySQLQuery("SELECT * FROM results ORDER BY gametime LIMIT 10");
+    const results = await mySQLQuery("SELECT * FROM results ORDER BY gametime LIMIT 20");
 
     console.log("results", results);
     if (results && results.length) {
